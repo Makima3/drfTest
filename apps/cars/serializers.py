@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from .models import CarModel
 
+
 class CarSerializer(serializers.ModelSerializer): # ModelSerializer чіпляє дані з вже прописаної моделі, тобто не потребує прописування всіх полів
     class Meta:
         model = CarModel # модель унаслідує вже існуючу CarModel
