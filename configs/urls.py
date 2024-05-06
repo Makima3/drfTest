@@ -14,9 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
-from apps.cars.views import CarListView
+from django.urls import path, include
 
 urlpatterns = [
-    path('cars', CarListView.as_view(), name='cars_list_create'),
+    path('cars', include('apps.cars.urls')), # замість view прописуємо include, а в середину вкладаємо шлях до urls
 ]
