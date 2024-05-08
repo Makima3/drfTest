@@ -34,6 +34,11 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+
+    # my apps
+    'apps.autoparks',
+    'apps.cars',
+
 ]
 
 MIDDLEWARE = [
@@ -68,9 +73,9 @@ WSGI_APPLICATION = 'configs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_var',
-        'USER': 'root',
-        'PASSWORD': 'rootroot',
+        'NAME': 'lection_var',
+        'USER': 'user',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306'
     }
