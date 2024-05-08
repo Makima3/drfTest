@@ -1,0 +1,8 @@
+from django.urls import path
+
+from .views import CarListView, CarRetrieveUpdateDestroyView
+
+urlpatterns = [
+    path('', CarListView.as_view(), name='car-list'),
+    path('/<int:pk>', CarRetrieveUpdateDestroyView.as_view(), name='car-retrieve_update_destroy'),
+]
