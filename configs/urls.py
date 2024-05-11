@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('apps.cars.urls'), name='cars'),
-    path('', include('apps.autoparks.urls'), name='autoparks')
+    path('cars', include('apps.cars.urls')),
+    path('autoparks', include('apps.autoparks.urls')),
 ]
