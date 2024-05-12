@@ -6,5 +6,3 @@ class AutoParkModel(models.Model):
         db_table = 'auto_parks'
     name = models.CharField(max_length=20)
 
-
-
