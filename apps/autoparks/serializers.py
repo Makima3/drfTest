@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
 from .models import AutoParkModel
-from ..cars.serializers import CarSerializer
+from apps.cars.serializers import CarModelSerializer
 
 
-class AutoParkSerializer(serializers.ModelSerializer):
-    cars = CarSerializer(many=True, read_only=True) # вказуємо для того щоб вивело які є машини
+class AutoParkModelSerializer(serializers.ModelSerializer):
+    cars = CarModelSerializer(many=True, read_only=True)
 
     class Meta:
         model = AutoParkModel
