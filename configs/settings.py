@@ -36,8 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my apps
-    'apps.autoparks',
-    'apps.cars',
 
 ]
 
