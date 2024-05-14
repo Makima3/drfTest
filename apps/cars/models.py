@@ -9,6 +9,7 @@ from .choices import CarChoices
 class CarModel(models.Model):
     class Meta:
         db_table = 'cars'
+        ordering = ('id',) # при пагінаціїї вказується orderindтобто як мають виводиться елементи, і за яким значенням впорядковані (ASC, DESC'DEFAULT_PAGINATION_CLASS': 'core.pagination.PagePagination',)
     brand = models.CharField(max_length=50, validators= [V.RegexValidator('^[A-Z][a-zA-z]{2,19}$', [
         'first letter uppercase',
         'min 3',
