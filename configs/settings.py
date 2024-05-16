@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from .extra_conf import *
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-=(uiedu87#w0z(!6tweuilsj(11srjvhv-)no=#^o6orkb1hl@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+AUTH_USER_MODEL = 'users.UserModel'
+
 ALLOWED_HOSTS = []
 
 
@@ -34,10 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'rest_framework_simplejwt',
 
     # my apps
     'core',
     'apps.users',
+    'apps.auth',
 ]
 
 MIDDLEWARE = [
